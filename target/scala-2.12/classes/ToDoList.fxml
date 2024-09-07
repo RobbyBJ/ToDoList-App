@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="ToDoListController">
+    <top>
+        <HBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets topRightBottomLeft="10" />
+            </padding>
+            <TextField fx:id="taskInput" promptText="Enter a new task" HBox.hgrow="ALWAYS" />
+            <Button fx:id="addButton" defaultButton="true" text="Add Task" />
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets topRightBottomLeft="10" />
+            </padding>
+            <ListView fx:id="taskListView" VBox.vgrow="ALWAYS" />
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10">
+            <padding>
+                <Insets topRightBottomLeft="10" />
+            </padding>
+            <Button fx:id="removeButton" text="Remove Task" />
+            <Button fx:id="clearButton" text="Clear All Tasks" />
+            <Label fx:id="sizeLabel" text="Total Tasks: 0" />
+        </HBox>
+    </bottom>
+</BorderPane>
